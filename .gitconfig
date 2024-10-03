@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Mihai Florescu
+	email = fratelemk@outlook.com
+[core]
+	editor = vim
