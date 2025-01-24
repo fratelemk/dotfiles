@@ -1,13 +1,15 @@
 set nocompatible
-set noerrorbells       " Disable audio bell
-set visualbell         " Enable visual bell
 
-syntax on              " Enable syntax highlighting
-set background=dark    " Enable dark mode
-colorscheme wildcharm  " Built-in colorscheme
+set noerrorbells
+set visualbell
 
-filetype plugin indent on     " Enable filetype specific plugins
+syntax on
+set background=dark
+colorscheme wildcharm
 
+set scrolloff=5
+
+filetype plugin indent on
 set autoindent smartindent
 
 set showmode
@@ -18,49 +20,35 @@ set number
 set relativenumber
 
 set nobackup
-set autoread
 set noswapfile
+set autoread
+set hidden
+
 set path+=**
+
 set wildmenu
 set title
+
+set hlsearch 
+set incsearch
+
 set nowrap
 set showcmd
-set hlsearch
-set incsearch
-set hidden
 set cursorline
+
 augroup betterCursor
         autocmd!
         autocmd InsertLeave,WinEnter * set cursorline
         autocmd InsertEnter,WinLeave * set nocursorline
     augroup END
 
-
-let mapleader = " "
-nmap <leader>pv :Ex<CR>
-
-" Netrw appearance
 let g:netrw_browse_split = 0
 let g:netrw_banner = 0
 
-
-" Jump to buffer
+let mapleader = " "
+nnoremap <leader>pv :Ex<CR>
 nnoremap gb :ls<CR>:b<Space>
-
-" List recently opened files and open a new buffer
 nnoremap gs :browse oldfiles<CR>
-
-" Search for files
 nnoremap gf :find<Space>
-
-" Cycle through buffers
 nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
-
-" Plugins
-call plug#begin()
-
-Plug 'ap/vim-buftabline'
-Plug 'sheerun/vim-polyglot'
-
-call plug#end()
