@@ -23,3 +23,13 @@ nvm install 22
 
 Move the JDK to `/Library/Java/JavaVirtualMachines/
 
+---
+
+## Conda
+
+mkdir -p ~/Library/Conda
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/Library/Conda/miniconda.sh
+bash ~/miniconda3/miniconda.sh -b -u -p ~/Library/Conda
+rm ~/Library/Conda/miniconda.sh
+
+~/Library/Conda/bin/conda init zsh
