@@ -21,3 +21,13 @@ Check for a package's config files
 
 Check for a package
 `rpm -qa`
+
+---
+
+### NetworkManager
+
+Check for *autoconnect*
+`nmcli -f name,autoconnect connection`
+
+Disable *autocconect*
+`nmcli con mod <con-name> connection.autoconnect no`
