@@ -29,10 +29,5 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# NodeJS
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 source /Users/mihaiflorescu/.local/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /Users/mihaiflorescu/.local/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
