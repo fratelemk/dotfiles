@@ -21,15 +21,19 @@ nvm install 22
 
 [Download a JDK](https://learn.microsoft.com/en-us/java/openjdk/download)
 
-Move the JDK to `/Library/Java/JavaVirtualMachines/
+Move the downloaded JDK to `/Library/Java/JavaVirtualMachines/`
 
 ---
 
 ## Conda
 
+```
 mkdir -p ~/Library/Conda
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/Library/Conda/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/Library/Conda
 rm ~/Library/Conda/miniconda.sh
 
 ~/Library/Conda/bin/conda init zsh
+
+git clone https://github.com/conda-incubator/conda-zsh-completion ~/.local/zsh/conda-zsh-completion
+```
