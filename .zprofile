@@ -4,3 +4,6 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 # Blender
 export PATH="/Applications/Blender.app/Contents/MacOS:$PATH"
+
+# Jupyter
+export JUPYTER_KERNELS=~/Library/Jupyter/runtime/
