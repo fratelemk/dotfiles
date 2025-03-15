@@ -2,10 +2,17 @@
 
 ### Remove Packages
 
-`dnf remove Thunar xfce-terminal volumeicon mousepad && rm -rf ~/.config/xfce4`
-
+```
+sudo dnf remove Thunar xfce-terminal volumeicon mousepad
+rm -rf ~/.config/xfce4`
+```
 ### Disable Printing
-`dnf remove cups system-config-printer* ghostscript-tools-printing gutenprint && rm -rf /etc/cups /var/cache/cups /usr/lib/cups /usr/share/cups && sudo semodule -X 100 -r cups`
+
+```
+sudo dnf remove cups system-config-printer* ghostscript-tools-printing gutenprint
+sudo rm -rf /etc/cups /var/cache/cups /usr/lib/cups /usr/share/cups
+sudo semodule -X 100 -r cups`
+```
 
 ### GTK Dark Mode
 ```
