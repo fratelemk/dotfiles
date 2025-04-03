@@ -1,14 +1,17 @@
 ## ZSH
 
-### autosuggestions
-`git clone https://github.com/zsh-users/zsh-autosuggestions ~/.local/zsh/zsh-autosuggestions`
+### [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+`git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.local/zsh/zsh-autosuggestions`
 
-### syntax-highlighting
+### [syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.local/zsh/zsh-syntax-highlighting`
+
+### [completions](https://github.com/zsh-users/zsh-completions)
+`git clone https://github.com/zsh-users/zsh-completions.git ~/.local/zsh/zsh-completions`
 
 ---
 
-## NodeJS
+## [NodeJS](https://nodejs.org/en)
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -21,11 +24,11 @@ nvm install 22
 
 [Download a JDK](https://learn.microsoft.com/en-us/java/openjdk/download)
 
-Move the downloaded JDK to `/Library/Java/JavaVirtualMachines/`
+Move downloaded JDK to `/Library/Java/JavaVirtualMachines/`
 
 ---
 
-## Conda
+## [Conda](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
 ```
 mkdir -p ~/Library/Conda
