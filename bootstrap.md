@@ -13,7 +13,7 @@
 
 ## [NodeJS](https://nodejs.org/en)
 
-```
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 nvm install 22
 ```
@@ -30,7 +30,7 @@ Move downloaded JDK to `/Library/Java/JavaVirtualMachines/`
 
 ## [Conda](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
-```
+```bash
 mkdir -p ~/Library/Conda
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/Library/Conda/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/Library/Conda
@@ -39,4 +39,13 @@ rm ~/Library/Conda/miniconda.sh
 ~/Library/Conda/bin/conda init zsh
 
 git clone https://github.com/conda-incubator/conda-zsh-completion ~/.local/zsh/conda-zsh-completion
+```
+
+# Defaults
+
+```bash
+# Dock
+
+defaults write com.apple.dock autohide -bool true
+
 ```
