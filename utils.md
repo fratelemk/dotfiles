@@ -1,9 +1,5 @@
 ## Basics
 
-- Learn basic Bash. Actually, type `man bash` and at least skim the whole thing; it's pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning *only* zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).
-
-- Learn at least one text-based editor well. The `nano` editor is one of the simplest for basic editing (opening, editing, saving, searching). However, for the power user in a text terminal, there is no substitute for Vim (`vi`), the hard-to-learn but venerable, fast, and full-featured editor. Many people also use the classic Emacs, particularly for larger editing tasks. (Of course, any modern software developer working on an extensive project is unlikely to use only a pure text-based editor and should also be familiar with modern graphical IDEs and tools.)
-
 - Finding documentation:
   - Know how to read official documentation with `man` (for the inquisitive, `man man` lists the section numbers, e.g. 1 is "regular" commands, 5 is files/conventions, and 8 are for administration). Find man pages with `apropos`.
   - Know that some commands are not executables, but Bash builtins, and that you can get help on them with `help` and `help -d`. You can find out whether a command is an executable, shell builtin or an alias by using `type command`.
@@ -137,16 +133,10 @@ EOF
 
 - A few other options relevant to ssh are security sensitive and should be enabled with care, e.g. per subnet or host or in trusted networks: `StrictHostKeyChecking=no`, `ForwardAgent=yes`
 
-- Consider [`mosh`](https://mosh.org/) an alternative to ssh that uses UDP, avoiding dropped connections and adding convenience on the road (requires server-side setup).
-
 - To get the permissions on a file in octal form, which is useful for system configuration but not available in `ls` and easy to bungle, use something like
 ```sh
       stat -c '%A %a %n' /etc/timezone
 ```
-
-- For interactive selection of values from the output of another command, use [`percol`](https://github.com/mooz/percol) or [`fzf`](https://github.com/junegunn/fzf).
-
-- For interaction with files based on the output of another command (like `git`), use `fpp` ([PathPicker](https://github.com/facebook/PathPicker)).
 
 - For a simple web server for all files in the current directory (and subdirs), available to anyone on your network, use:
 `python -m SimpleHTTPServer 7777` (for port 7777 and Python 2) and `python -m http.server 7777` (for port 7777 and Python 3).
@@ -168,21 +158,7 @@ EOF
 
 - To locate a file by name in the current directory, `find . -iname '*something*'` (or similar). To find a file anywhere by name, use `locate something` (but bear in mind `updatedb` may not have indexed recently created files).
 
-- For general searching through source or data files, there are several options more advanced or faster than `grep -r`, including (in rough order from older to newer) [`ack`](https://github.com/beyondgrep/ack2), [`ag`](https://github.com/ggreer/the_silver_searcher) ("the silver searcher"), and [`rg`](https://github.com/BurntSushi/ripgrep) (ripgrep).
-
-- To convert HTML to text: `lynx -dump -stdin`
-
-- For Markdown, HTML, and all kinds of document conversion, try [`pandoc`](http://pandoc.org/). For example, to convert a Markdown document to Word format: `pandoc README.md --from markdown --to docx -o temp.docx`
-
-- If you must handle XML, `xmlstarlet` is old but good.
-
-- For JSON, use [`jq`](http://stedolan.github.io/jq/). For interactive use, also see [`jid`](https://github.com/simeji/jid) and [`jiq`](https://github.com/fiatjaf/jiq).
-
-- For YAML, use [`shyaml`](https://github.com/0k/shyaml).
-
-- For Excel or CSV files, [csvkit](https://github.com/onyxfish/csvkit) provides `in2csv`, `csvcut`, `csvjoin`, `csvgrep`, etc.
-
-- For Amazon S3, [`s3cmd`](https://github.com/s3tools/s3cmd) is convenient and [`s4cmd`](https://github.com/bloomreach/s4cmd) is faster. Amazon's [`aws`](https://github.com/aws/aws-cli) and the improved [`saws`](https://github.com/donnemartin/saws) are essential for other AWS-related tasks.
+- For general searching through source or data files, `grep -r`
 
 - Know about `sort` and `uniq`, including uniq's `-u` and `-d` options -- see one-liners below. See also `comm`.
 
@@ -219,8 +195,6 @@ EOF
 ```sh
 mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 ```
-
-- For monitoring progress when processing files, use [`pv`](http://www.ivarch.com/programs/pv.shtml), [`pycp`](https://github.com/dmerejkowsky/pycp), [`pmonitor`](https://github.com/dspinellis/pmonitor), [`progress`](https://github.com/Xfennec/progress), `rsync --progress`, or, for block-level copying, `dd status=progress`.
 
 - Use `shuf` to shuffle or select random lines from a file.
 
@@ -263,27 +237,19 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 ## System debugging
 
-- For web debugging, `curl` and `curl -I` are handy, or their `wget` equivalents, or the more modern [`httpie`](https://github.com/jkbrzt/httpie).
-
 - To know current cpu/disk status, the classic tools are `top` (or the better `htop`), `iostat`, and `iotop`. Use `iostat -mxz 15` for basic CPU and detailed per-partition disk stats and performance insight.
 
 - For network connection details, use `netstat` and `ss`.
 
-- For a quick overview of what's happening on a system, `dstat` is especially useful. For broadest overview with details, use [`glances`](https://github.com/nicolargo/glances).
+- For a quick overview of what's happening on a system, `dstat` is especially useful.
 
 - To know memory status, run and understand the output of `free` and `vmstat`. In particular, be aware the "cached" value is memory held by the Linux kernel as file cache, so effectively counts toward the "free" value.
 
 - Java system debugging is a different kettle of fish, but a simple trick on Oracle's and some other JVMs is that you can run `kill -3 <pid>` and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs. The JDK's `jps`, `jstat`, `jstack`, `jmap` are useful. [SJK tools](https://github.com/aragozin/jvm-tools) are more advanced.
 
-- Use [`mtr`](http://www.bitwizard.nl/mtr/) as a better traceroute, to identify network issues.
+- For looking at why a disk is full, `du -sh *`.  
 
-- For looking at why a disk is full, [`ncdu`](https://dev.yorhel.nl/ncdu) saves time over the usual commands like `du -sh *`.
-
-- To find which socket or process is using bandwidth, try [`iftop`](http://www.ex-parrot.com/~pdw/iftop/) or [`nethogs`](https://github.com/raboof/nethogs).
-
-- The `ab` tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance. For more complex load testing, try `siege`.
-
-- For more serious network debugging, [`wireshark`](https://wireshark.org/), [`tshark`](https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html), or [`ngrep`](http://ngrep.sourceforge.net/).
+- The `ab` tool (comes with Apache) is helpful for quick-and-dirty checking of web server performance.
 
 - Know about `strace` and `ltrace`. These can be helpful if a program is failing, hanging, or crashing, and you don't know why, or if you want to get a general idea of performance. Note the profiling option (`-c`), and the ability to attach to a running process (`-p`). Use trace child option (`-f`) to avoid missing important calls.
 
@@ -390,15 +356,13 @@ A few examples of piecing together commands:
 
 - `factor`: factor integers
 
-- [`gpg`](https://gnupg.org/): encrypt and sign files
+- `gpg`: encrypt and sign files
 
 - `toe`: table of terminfo entries
 
 - `nc`: network debugging and data transfer
 
 - `socat`: socket relay and tcp port forwarder (similar to `netcat`)
-
-- [`slurm`](https://github.com/mattthias/slurm): network traffic visualization
 
 - `dd`: moving data between files or devices
 
@@ -417,8 +381,6 @@ A few examples of piecing together commands:
 - `logrotate`: rotate, compress and mail logs.
 
 - `watch`: run a command repeatedly, showing results and/or highlighting changes
-
-- [`when-changed`](https://github.com/joh/when-changed): runs any command you specify whenever it sees file changed. See `inotifywait` and `entr` as well.
 
 - `tac`: print files in reverse
 
@@ -444,27 +406,19 @@ A few examples of piecing together commands:
 
 - `nm`: symbols from object files
 
-- `ab` or [`wrk`](https://github.com/wg/wrk): benchmarking web servers
+- `ab`: benchmarking web servers
 
 - `strace`: system call debugging
-
-- [`mtr`](http://www.bitwizard.nl/mtr/): better traceroute for network debugging
 
 - `cssh`: visual concurrent shell
 
 - `rsync`: sync files and folders over SSH or in local file system
-
-- [`wireshark`](https://wireshark.org/) and [`tshark`](https://www.wireshark.org/docs/wsug_html_chunked/AppToolstshark.html): packet capture and network debugging
-
-- [`ngrep`](http://ngrep.sourceforge.net/): grep for the network layer
 
 - `host` and `dig`: DNS lookups
 
 - `lsof`: process file descriptor and socket info
 
 - `dstat`: useful system stats
-
-- [`glances`](https://github.com/nicolargo/glances): high level, multi-subsystem overview
 
 - `iostat`: Disk usage stats
 
@@ -480,10 +434,6 @@ A few examples of piecing together commands:
 
 - `id`: user/group identity info
 
-- [`sar`](http://sebastien.godard.pagesperso-orange.fr/): historic system stats
-
-- [`iftop`](http://www.ex-parrot.com/~pdw/iftop/) or [`nethogs`](https://github.com/raboof/nethogs): network utilization by socket or process
-
 - `ss`: socket statistics
 
 - `dmesg`: boot and system error messages
@@ -498,16 +448,3 @@ A few examples of piecing together commands:
 
 - `lsmod` and `modinfo`: List and show details of kernel modules.
 
-- `fortune`, `ddate`, and `sl`: um, well, it depends on whether you consider steam locomotives and Zippy quotations "useful"
-
-- Copy output of any command to a desktop app with `pbcopy` and paste input from one with `pbpaste`.
-
-- To enable the Option key in macOS Terminal as an alt key (such as used in the commands above like **alt-b**, **alt-f**, etc.), open Preferences -> Profiles -> Keyboard and select "Use Option as Meta key".
-
-- To open a file with a desktop app, use `open` or `open -a /Applications/Whatever.app`.
-
-- Spotlight: Search files with `mdfind` and list metadata (such as photo EXIF info) with `mdls`.
-
-- Be aware macOS is based on BSD Unix, and many commands (for example `ps`, `ls`, `tail`, `awk`, `sed`) have many subtle variations from Linux, which is largely influenced by System V-style Unix and GNU tools. You can often tell the difference by noting a man page has the heading "BSD General Commands Manual." In some cases GNU versions can be installed, too (such as `gawk` and `gsed` for GNU awk and sed). If writing cross-platform Bash scripts, avoid such commands (for example, consider Python or `perl`) or test carefully.
-
-- To get macOS release information, use `sw_vers`.
