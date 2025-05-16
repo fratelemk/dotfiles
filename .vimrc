@@ -52,3 +52,5 @@ nnoremap gs :browse oldfiles<CR>
 nnoremap gf :find<Space>
 nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
+nnoremap gd :bd<CR>
+nnoremap gc :enew<CR> 
