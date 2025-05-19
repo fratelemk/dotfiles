@@ -1,92 +1,46 @@
 {
-    "telemetry.telemetryLevel": "off",
-    "chat.commandCenter.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/.git": true, // Git
+        "**/.DS_Store": true, // macOS
+        "**/.venv": true, // Python
+        "**/__pycache__": true, // Python
+        "**/.ipynb_checkpoints": true, // Jupyter
+        "**/node_modules": true, // JavaScript
+        "**/.parcel-cache": true, // Parcel
+        "**/.vscode": true, // VSCode
+    },
+    // Languages
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "diffEditor.ignoreTrimWhitespace": false,
-        "editor.defaultColorDecorators": "auto",
-        "editor.formatOnType": false,
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
     },
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/.venv": true,
-        "**/__pycache__": true,
-        "**/node_modules": true,
-        "**/.ipynb_checkpoints": true,
-        "**/.idea": true,
-        "**/.yarn": true,
-        "**/yarn.lock": true,
-        "**/.parcel-cache": true,
-        "**/.pnp.*js": true
-    },
+    // Explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    // Editor
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": true,
     "editor.minimap.autohide": true,
     "editor.minimap.size": "fill",
+    // Workbench
     "workbench.tips.enabled": false,
     "workbench.activityBar.location": "top",
+    // Window
     "window.density.editorTabHeight": "compact",
-    "window.commandCenter": false,
+    "window.commandCenter": true,
     "window.restoreWindows": "all",
+    // VIM
     "vim.leader": " ",
     "vim.hlsearch": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.smartRelativeLine": true,
     "vim.highlightedyank.enable": true,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<leader>", "a"],
-            "commands": ["vscode-harpoon.addEditor"]
-        },
-        {
-            "before": ["<leader>", "e"],
-            "commands": ["vscode-harpoon.editEditors"]
-        },
-        {
-            "before": ["<leader>", "p", "e"],
-            "commands": ["vscode-harpoon.editorQuickPick"]
-        },
-        {
-            "before": ["<leader>", "a"],
-            "commands": ["vscode-harpoon.addEditor"]
-        },
-        {
-            "before": ["<leader>", "1"],
-            "commands": ["vscode-harpoon.goToEditor1"]
-        },
-        {
-            "before": ["<leader>", "2"],
-            "commands": ["vscode-harpoon.goToEditor2"]
-        },
-        {
-            "before": ["<leader>", "3"],
-            "commands": ["vscode-harpoon.goToEditor3"]
-        },
-        {
-            "before": ["<leader>", "4"],
-            "commands": ["vscode-harpoon.goToEditor4"]
-        },
-    ],
-    "jupyter.askForKernelRestart": false,
-    "isort.check": true,
-    "isort.severity": {
-        "W": "Warning",
-        "E": "Hint"
-    },
-    "black-formatter.showNotifications": "always",
+    // Misc
+    "breadcrumbs.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "chat.commandCenter.enabled": false,
+    "extensions.ignoreRecommendations": true,
 }
