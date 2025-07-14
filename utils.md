@@ -241,8 +241,6 @@ mkdir empty && rsync -r --delete empty/ some-dir && rmdir some-dir
 
 - For network connection details, use `netstat` and `ss`.
 
-- For a quick overview of what's happening on a system, `dstat` is especially useful.
-
 - To know memory status, run and understand the output of `free` and `vmstat`. In particular, be aware the "cached" value is memory held by the Linux kernel as file cache, so effectively counts toward the "free" value.
 
 - Java system debugging is a different kettle of fish, but a simple trick on Oracle's and some other JVMs is that you can run `kill -3 <pid>` and a full stack trace and heap summary (including generational garbage collection details, which can be highly informative) will be dumped to stderr/logs. The JDK's `jps`, `jstat`, `jstack`, `jmap` are useful. [SJK tools](https://github.com/aragozin/jvm-tools) are more advanced.
@@ -417,8 +415,6 @@ A few examples of piecing together commands:
 - `host` and `dig`: DNS lookups
 
 - `lsof`: process file descriptor and socket info
-
-- `dstat`: useful system stats
 
 - `iostat`: Disk usage stats
 
