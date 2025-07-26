@@ -1,0 +1,43 @@
+{
+	"main": {
+		"prefix": "main",
+		"body": [
+			"if __name__ == \"__main__\":",
+			"\t${1:pass}"
+		],
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"for $1 in $2:",
+			"\t${3:pass}"
+		]
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if $1:",
+			"\t${2:pass}"
+		]
+	},
+	"with": {
+		"prefix": "with",
+		"body": [
+			"with $1 as $2:",
+			"\t${3:pass}"
+		],
+	},
+	"def": {
+		"prefix": "def",
+		"body": [
+			"def $1($2):",
+			"\t${4:pass}"
+		],
+	},
+	"lambda": {
+		"prefix": "lambda",
+		"body": [
+			"lambda ${1:x}: $2"
+		],
+	},
+}
