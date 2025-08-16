@@ -1,7 +1,30 @@
 # Aliases
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
+alias ll='ls -Ghlp'
+alias la='ls -AGp'
+alias lla='ls -AGhlp'
+alias lsd='ls -Gd */'
+alias llsd='ls -lGd */'
+
+# Functions
+
+mk_venv() {
+	if [ -d ".venv" ]; then
+		echo "Error: A .venv directory already exists in $(pwd)" >&2
+		return 1
+	fi
+
+	python3 -m venv .venv
+	if [ $? -ne 0 ]; then
+		echo "Error: Failed to create virtual environment." >&2
+		return 1
+	fi
+
+	source .venv/bin/activate
+
+	pip install -U -q pip
+
+	echo "Initialized new virtual environment in $(pwd)/.venv"
+}
 
 # Prompt
 PS1=$'\n'"%F{green} %* %F{240}%3~ %F{white}"$'\n'"$ "
