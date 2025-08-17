@@ -38,6 +38,10 @@ rm ~/Library/Conda/miniconda.sh
 
 ~/Library/Conda/bin/conda init zsh
 
+conda update -n base -c conda-forge conda
+
+conda config --set auto_activate_base false
+
 git clone https://github.com/conda-incubator/conda-zsh-completion ~/.local/zsh/conda-zsh-completion
 ```
 
