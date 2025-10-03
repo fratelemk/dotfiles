@@ -31,14 +31,10 @@ Move downloaded JDK to `/Library/Java/JavaVirtualMachines/`
 ## [Conda](https://www.anaconda.com/docs/getting-started/miniconda/main)
 
 ```bash
-mkdir -p ~/Library/Conda
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/Library/Conda/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/Library/Conda
-rm ~/Library/Conda/miniconda.sh
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh
+bash ~/miniconda3/miniconda.sh -b -p ~/Library/Conda -c
 
-~/Library/Conda/bin/conda init zsh
-
-conda update -n base -c conda-forge conda
+conda update -n base -c defaults conda
 
 conda config --set auto_activate_base false
 
