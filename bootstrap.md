@@ -1,13 +1,89 @@
+## macOS Settings
+
+1. Disable `Widgets` both `On Desktop` & `In Stage Manager`      
+      
+      `Settings` -> `Desktop & Dock` -> `Show Widgets`       
+
+2. Change `Click wallpaper to show desktop` from `Always` to `Only in Stage Manager`
+
+3. Disable `Help Apple Improve Search`
+
+   `Settings` -> `Spotlight`
+
+4. Disable `Slightly dim the display on battery`
+
+   `Settings` -> `Battery` -> `Options`
+
+5. Enable `Firewall`
+
+6. Disable `Notifications`
+
+    - Game Center
+    - Tips
+
+7. Optimise Storage
+
+   `Settings` -> `General` -> `Storage` -> `Store in iCloud` / `Empty Bin automatically`
+
+8. Sign Out of Game Center
+
+---
+
+## Xcode Command Line Tools
+
+```bash
+xcode-select --install
+```
+
+## SSH Keys
+
+```bash
+ssh-keygen -t ed25519 -N "" -C ""
+
+eval "$(ssh-agent -s)"
+
+cat << 'EOF' >> ~/.ssh/config
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+EOF
+
+ssh-add ~/.ssh/id_ed25519
+
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+---
+
+## VIM
+
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+---
+
 ## ZSH
 
-### [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-`git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.local/zsh/zsh-autosuggestions`
+[autosuggestions](https://github.com/zsh-users/zsh-autosuggestions), [syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
-### [syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-`git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.local/zsh/zsh-syntax-highlighting`
+```bash
+mkdir -p "$HOME/.local/zsh"
 
-### [completions](https://github.com/zsh-users/zsh-completions)
-`git clone https://github.com/zsh-users/zsh-completions.git ~/.local/zsh/zsh-completions`
+git clone --depth 1 \
+  https://github.com/zsh-users/zsh-syntax-highlighting.git \
+  "$HOME/.local/zsh/zsh-syntax-highlighting"
+
+git clone --depth 1 \
+  https://github.com/zsh-users/zsh-autosuggestions.git \
+  "$HOME/.local/zsh/zsh-autosuggestions"
+
+cat <<'EOF' >> "$HOME/.zshrc"
+source $HOME/.local/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.local/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+EOF
+```
 
 ---
 
@@ -39,13 +115,4 @@ conda update -n base -c defaults conda
 conda config --set auto_activate_base false
 
 git clone https://github.com/conda-incubator/conda-zsh-completion ~/.local/zsh/conda-zsh-completion
-```
-
-# Defaults
-
-```bash
-# Dock
-
-defaults write com.apple.dock autohide -bool true
-
 ```
