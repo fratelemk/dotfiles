@@ -1,3 +1,10 @@
+" call plug#begin()
+" Plug 'sjl/badwolf'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'plasticboy/vim-markdown'
+" call plug#end()
+
+
 set nocompatible
 
 set noerrorbells
