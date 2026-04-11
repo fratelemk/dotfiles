@@ -27,6 +27,10 @@
 
 8. Sign Out of Game Center
 
+9. Show Path Bar
+
+   `Finder` -> `View` -> `Show Path Bar`
+
 ---
 
 ## Xcode Command Line Tools
