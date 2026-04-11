@@ -1,18 +1,24 @@
-" call plug#begin()
-" Plug 'sjl/badwolf'
-" Plug 'sheerun/vim-polyglot'
-" Plug 'plasticboy/vim-markdown'
-" call plug#end()
+call plug#begin()
 
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
 
 set nocompatible
 
 set noerrorbells
 set visualbell
 
+if exists('+termguicolors')
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+    endif
+
 syntax on
 set background=dark
-colorscheme wildcharm
+colorscheme spaceduck
 
 set scrolloff=5
 
