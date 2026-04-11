@@ -34,11 +34,9 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Completion
-autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
-_comp_options+=(globdots)
+autoload -Uz compinit; compinit
 
 # Navigation
 bindkey -v
@@ -52,5 +50,5 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-source /Users/mihaiflorescu/.local/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/mihaiflorescu/.local/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
