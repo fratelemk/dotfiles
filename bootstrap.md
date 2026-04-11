@@ -33,10 +33,12 @@
 
 ---
 
-## Xcode Command Line Tools
+## Xcode Command Line Tools & Locate Database
 
 ```bash
 xcode-select --install
+
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 ```
 
 ## SSH Keys
@@ -77,15 +79,15 @@ mkdir -p "$HOME/.local/zsh"
 
 git clone --depth 1 \
   https://github.com/zsh-users/zsh-syntax-highlighting.git \
-  "$HOME/.local/zsh/zsh-syntax-highlighting"
+  "$HOME/.local/share/zsh-syntax-highlighting"
 
 git clone --depth 1 \
   https://github.com/zsh-users/zsh-autosuggestions.git \
-  "$HOME/.local/zsh/zsh-autosuggestions"
+  "$HOME/.local/share/zsh-autosuggestions"
 
 cat <<'EOF' >> "$HOME/.zshrc"
-source $HOME/.local/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.local/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 EOF
 ```
 
