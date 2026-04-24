@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'sheerun/vim-polyglot'
+Plug 'sjl/badwolf'
 
 call plug#end()
 
