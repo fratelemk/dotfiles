@@ -1,0 +1,12 @@
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+      optional: true
+  vlans:
+    eth0.2:
+      id: 2
+      link: eth0
+      dhcp4: true
+      optional: true

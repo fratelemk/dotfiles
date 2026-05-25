@@ -1,0 +1,30 @@
+#cloud-config
+manage_resolv_conf: false
+
+hostname: raspberrypi
+manage_etc_hosts: true
+packages:
+- avahi-daemon
+- tinyproxy
+- snmp
+- snmpd
+apt:
+  preserve_sources_list: true
+  conf: |
+    Acquire {
+      Check-Date "false";
+    };
+timezone: Europe/Bucharest
+keyboard:
+  model: pc105
+  layout: "us"
+user:
+  name: pi
+  shell: /bin/bash
+  lock_passwd: false
+  passwd: "$y$jB5$F/LMlAn9KRZOMR4Aa7aHm/$Tsn5goEe.V2x.Xn436UGSH.HLOYDfBPba5J/vci3NwD"
+ssh_pwauth: true
+runcmd:
+  - [ systemctl, enable, --now, ssh ]
+  - [ nmcli, radio, all, "off" ]
+  - [ systemct, disable, --now, wpa_supplicant ]
