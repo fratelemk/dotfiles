@@ -7,4 +7,15 @@
 
 **Services**
 - [Tinyproxy](https://tinyproxy.github.io/) - HTTP/S Proxy
+  
+  Installation
+  ```bash
+  apt install tinyproxy
+  ```
+  
 - [Pi-hole](https://pi-hole.net/) - DNS Sinkhole & DHCP/NTP Server
+
+  Installation
+  ```bash
+  curl -sSL https://install.pi-hole.net | bash
+  ```
