@@ -27,3 +27,29 @@ sudo rpi-update
   ```bash
   curl -sSL https://install.pi-hole.net | bash
   ```
+
+## Pi-hole
+
+### NTP
+
+#### Troubleshooting
+
+```bash
+timedatectl status
+
+timedatectl show-timesync --all | grep Server
+```
+
+```bash
+nc -vzu 127.0.0.1 123
+```
+
+```bash
+apt install ntpsec-ntpdate
+ntpdate -q 127.0.0.1
+```
+
+```bash
+apt install ntpsec-ntpdig
+sntp 127.0.0.1
+```
