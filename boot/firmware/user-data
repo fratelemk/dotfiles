@@ -4,6 +4,10 @@ manage_resolv_conf: false
 hostname: raspberrypi
 manage_etc_hosts: true
 packages:
+- vim
+- tmux
+- s3cmd
+- avahi-utils
 - avahi-daemon
 - tinyproxy
 - snmp
