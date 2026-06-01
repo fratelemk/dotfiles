@@ -10,6 +10,7 @@
 ```bash
 sudo apt update
 sudo rpi-eeprom-update -a
+sudo rpi-update
 ```
 
 **Services**
