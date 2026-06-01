@@ -102,3 +102,16 @@ esac
 ```
 
 **Reference:** [Dynamically set NTP servers received via DHCP](https://wiki.archlinux.org/title/NetworkManager#Dynamically_set_NTP_servers_received_via_DHCP_with_systemd-timesyncd)
+
+#### systemd-network
+
+Set directly in `/etc/systemd/network/xx.network`:
+
+```ini
+[Network]
+DHCP=yes
+[DHCP]
+UseNTP=yes
+```
+
+**Reference:** see `man systemd.network`
