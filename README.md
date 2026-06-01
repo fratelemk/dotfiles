@@ -53,3 +53,16 @@ ntpdate -q 127.0.0.1
 apt install ntpsec-ntpdig
 sntp 127.0.0.1
 ```
+
+> [!TIP] Use `systemd-analyze cat-config systemd/timesyncd.conf` to display the full `timesyncd` config.
+
+- LinkNTPServers= — per-interface NTP from DHCP (option 42), pushed by `systemd-networkd`.
+
+- SystemNTPServers= — static config from /etc/systemd/timesyncd.conf.
+
+- RuntimeNTPServers= — runtime-injected, via `timedatectl set-ntp-servers`.
+
+- FallbackNTPServers=0.debian.pool.ntp.org ... — last resort, used ONLY when all above empty. Comes from defaults in /etc/systemd/timesyncd.conf. 
+
+- ServerName=2.debian.pool.ntp.org — server timesyncd CURRENTLY synced to.
+ServerAddress=31.14.41.138 — resolved IP of that server, active connection right now.
