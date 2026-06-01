@@ -5,6 +5,13 @@
 3. Blacklist `spi` & `i2c` kernel modules
 4. Configure network interfaces
 
+### Update
+
+```bash
+sudo apt update
+sudo rpi-eeprom-update -a
+```
+
 **Services**
 - [Tinyproxy](https://tinyproxy.github.io/) - HTTP/S Proxy
   
