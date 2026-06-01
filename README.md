@@ -115,3 +115,19 @@ UseNTP=yes
 ```
 
 **Reference:** see `man systemd.network`
+
+#### NAT Rules
+
+  | Field            | Destination NAT   | Masquerade        |
+  |------------------|-------------------|-------------------|
+  | Protocol         | UDP               | UDP               |
+  | Interface        | VLAN 3            | VLAN 3            |
+  | Source IP        | `<lan_ip>`        | `<lan_ip>`        |
+  | Source Port      | Any               | Any               |
+  | Destination IP   | Any               | `<ntp_server_ip>` |
+  | Destination Port | 123               | 123               |
+  | Translated IP    | `<ntp_server_ip>` |                   |
+  | Translated Port  | 123               | Any               |
+
+**Reference:** [Redirect outgoing traffic to an internal NTP server](https://linuxincluded.com/ntp-server-ip-blacklisted-nat-redirection-ftw/)
+
