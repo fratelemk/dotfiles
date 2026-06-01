@@ -54,7 +54,8 @@ apt install ntpsec-ntpdig
 sntp 127.0.0.1
 ```
 
-> [!TIP] Use `systemd-analyze cat-config systemd/timesyncd.conf` to display the full `timesyncd` config.
+> [!TIP]
+> Use `systemd-analyze cat-config systemd/timesyncd.conf` to display the full `timesyncd` config.
 
 - LinkNTPServers= — per-interface NTP from DHCP (option 42), pushed by `systemd-networkd`.
 
@@ -66,3 +67,38 @@ sntp 127.0.0.1
 
 - ServerName=2.debian.pool.ntp.org — server timesyncd CURRENTLY synced to.
 ServerAddress=31.14.41.138 — resolved IP of that server, active connection right now.
+
+
+#### NetworkManager Dispatcher Hook
+
+**Location:** `/etc/NetworkManager/dispatcher.d/50-timesyncd`
+
+**Example:**
+
+```bash
+#!/bin/sh
+set -v
+echo args: $@
+
+[ -z "$CONNECTION_UUID" ] && exit 0
+INTERFACE="$1"
+ACTION="$2"
+
+case $ACTION in
+up | dhcp4-change | dhcp6-change)
+	[ -n "$DHCP4_NTP_SERVERS" ] || exit
+	mkdir -p /etc/systemd/timesyncd.conf.d
+	cat <<-THE_END >"/etc/systemd/timesyncd.conf.d/${CONNECTION_UUID}.conf"
+		[Time]
+		NTP=$DHCP4_NTP_SERVERS
+	THE_END
+	systemctl restart systemd-timesyncd.service
+	;;
+down)
+	rm -f "/etc/systemd/timesyncd.conf.d/${CONNECTION_UUID}.conf"
+	systemctl restart systemd-timesyncd.service
+	;;
+esac
+```
+
+**Reference:** [Dynamically set NTP servers received via DHCP](https://wiki.archlinux.org/title/NetworkManager#Dynamically_set_NTP_servers_received_via_DHCP_with_systemd-timesyncd)
