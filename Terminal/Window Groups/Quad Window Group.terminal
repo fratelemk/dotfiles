@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WindowList</key>
+	<array>
+		<dict>
+			<key>Origin</key>
+			<string>{-1, 770}</string>
+			<key>ScrollerStyle</key>
+			<integer>1</integer>
+			<key>ShowsTabBar</key>
+			<false/>
+			<key>ShowsTabBarInFullScreen</key>
+			<false/>
+			<key>Window Settings</key>
+			<array>
+				<dict>
+					<key>Tab Column Count</key>
+					<integer>62</integer>
+					<key>Tab Row Count</key>
+					<integer>17</integer>
+					<key>Tab Scrollback Restorable</key>
+					<true/>
+					<key>Tab Session Class ID</key>
+					<string>10E6245C-8802-43E4-9B07-6092B903957D</string>
+					<key>Tab Settings</key>
+					<dict>
+						<key>ProfileCurrentVersion</key>
+						<real>2.0899999999999999</real>
+						<key>name</key>
+						<string>Custom</string>
+						<key>type</key>
+						<string>Window Settings</string>
+					</dict>
+					<key>Tab Settings Name</key>
+					<string>Custom</string>
+					<key>Tab Working Directory URL</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu/</string>
+					<key>Tab Working Directory URL String</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu</string>
+					<key>TabSelected</key>
+					<true/>
+				</dict>
+			</array>
+			<key>WindowNumber</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Origin</key>
+			<string>{-1, 388}</string>
+			<key>ScrollerStyle</key>
+			<integer>1</integer>
+			<key>ShowsTabBar</key>
+			<false/>
+			<key>ShowsTabBarInFullScreen</key>
+			<false/>
+			<key>Window Settings</key>
+			<array>
+				<dict>
+					<key>Tab Column Count</key>
+					<integer>62</integer>
+					<key>Tab Row Count</key>
+					<integer>17</integer>
+					<key>Tab Scrollback Restorable</key>
+					<true/>
+					<key>Tab Session Class ID</key>
+					<string>7280D165-EB3A-4465-A92D-751A3715A56C</string>
+					<key>Tab Settings</key>
+					<dict>
+						<key>ProfileCurrentVersion</key>
+						<real>2.0899999999999999</real>
+						<key>name</key>
+						<string>Custom</string>
+						<key>type</key>
+						<string>Window Settings</string>
+					</dict>
+					<key>Tab Settings Name</key>
+					<string>Custom</string>
+					<key>Tab Working Directory URL</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu/</string>
+					<key>Tab Working Directory URL String</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu</string>
+					<key>TabSelected</key>
+					<true/>
+				</dict>
+			</array>
+			<key>WindowNumber</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>Origin</key>
+			<string>{640, 770}</string>
+			<key>ScrollerStyle</key>
+			<integer>1</integer>
+			<key>ShowsTabBar</key>
+			<false/>
+			<key>ShowsTabBarInFullScreen</key>
+			<false/>
+			<key>Window Settings</key>
+			<array>
+				<dict>
+					<key>Tab Column Count</key>
+					<integer>62</integer>
+					<key>Tab Row Count</key>
+					<integer>17</integer>
+					<key>Tab Scrollback Restorable</key>
+					<true/>
+					<key>Tab Session Class ID</key>
+					<string>43154ABA-7F14-4A82-9619-222EC4C2A008</string>
+					<key>Tab Settings</key>
+					<dict>
+						<key>ProfileCurrentVersion</key>
+						<real>2.0899999999999999</real>
+						<key>name</key>
+						<string>Custom</string>
+						<key>type</key>
+						<string>Window Settings</string>
+					</dict>
+					<key>Tab Settings Name</key>
+					<string>Custom</string>
+					<key>Tab Working Directory URL</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu/</string>
+					<key>Tab Working Directory URL String</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu</string>
+					<key>TabSelected</key>
+					<true/>
+				</dict>
+			</array>
+			<key>WindowNumber</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>Origin</key>
+			<string>{640, 388}</string>
+			<key>ScrollerStyle</key>
+			<integer>1</integer>
+			<key>ShowsTabBar</key>
+			<false/>
+			<key>ShowsTabBarInFullScreen</key>
+			<false/>
+			<key>Window Settings</key>
+			<array>
+				<dict>
+					<key>Tab Column Count</key>
+					<integer>62</integer>
+					<key>Tab Row Count</key>
+					<integer>17</integer>
+					<key>Tab Scrollback Restorable</key>
+					<true/>
+					<key>Tab Session Class ID</key>
+					<string>17231C16-8EC1-49DD-86FC-673B727DF9A1</string>
+					<key>Tab Settings</key>
+					<dict>
+						<key>ProfileCurrentVersion</key>
+						<real>2.0899999999999999</real>
+						<key>name</key>
+						<string>Custom</string>
+						<key>type</key>
+						<string>Window Settings</string>
+					</dict>
+					<key>Tab Settings Name</key>
+					<string>Custom</string>
+					<key>Tab Working Directory URL</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu/</string>
+					<key>Tab Working Directory URL String</key>
+					<string>file://Mihais-MacBook-Air.local/Users/mihaiflorescu</string>
+					<key>TabSelected</key>
+					<true/>
+				</dict>
+			</array>
+			<key>WindowNumber</key>
+			<integer>4</integer>
+		</dict>
+	</array>
+	<key>name</key>
+	<string>Quad Window Group</string>
+	<key>type</key>
+	<string>Window Group</string>
+</dict>
+</plist>
