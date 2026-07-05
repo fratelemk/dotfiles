@@ -149,3 +149,11 @@ conda config --set auto_activate_base false
 
 git clone https://github.com/conda-incubator/conda-zsh-completion ~/.local/zsh/conda-zsh-completion
 ```
+
+## Command Reference
+
+Force update `locate` database:
+
+```sh
+sudo /usr/libexec/locate.updatedb
+```
