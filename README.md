@@ -1,3 +1,38 @@
+## macOS Bootstrap
+
+Enable 'Remote Login':
+
+```sh
+sudo systemsetup -setremotelogin on
+```
+Install 'Xcode Command Line Tools':
+
+```sh
+xcode-select --install
+```
+
+Enable `locate` database:
+
+```sh
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+```
+
+Enable `pip`:
+
+#### Method 1 - System
+
+```sh
+python3 -m ensurepip --upgrade
+```
+
+#### Method 2 - Homebrew
+
+```sh
+export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:$PATH"
+sudo pip3 install --upgrade pip
+```
+
+
 ## macOS Settings
 
 1. Disable `Widgets` both `On Desktop` & `In Stage Manager`      
@@ -32,14 +67,6 @@
    `Finder` -> `View` -> `Show Path Bar`
 
 ---
-
-## Xcode Command Line Tools & Locate Database
-
-```bash
-xcode-select --install
-
-sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
-```
 
 ## SSH Keys
 
