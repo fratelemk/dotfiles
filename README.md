@@ -71,7 +71,7 @@ sudo pip3 install --upgrade pip
 ## SSH Keys
 
 ```bash
-ssh-keygen -t ed25519 -N "" -C ""
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N "" -C ""
 
 eval "$(ssh-agent -s)"
 
