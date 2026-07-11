@@ -157,3 +157,15 @@ Force update `locate` database:
 ```sh
 sudo /usr/libexec/locate.updatedb
 ```
+
+Export NFS share:
+
+```
+<path> -alldirs -mapall=501 -ro -network 192.168.1.0 -mask 255.255.255.0
+```
+
+View exported shares:
+
+```sh
+showmount -e localhost
+```
