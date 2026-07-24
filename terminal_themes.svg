@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="384" viewBox="0 0 620 384" font-family="Menlo, Monaco, Consolas, monospace">
+<rect width="620" height="384" fill="#000000"/>
+<text x="24" y="40" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Desert Sand</text>
+<text x="24" y="62" font-size="16" letter-spacing="0">
+<tspan fill="#ffd7af">user</tspan><tspan fill="#ffd700">@</tspan><tspan fill="#ffd787">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#ffffaf">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+<line x1="24" y1="74" x2="596" y2="74" stroke="#2a2a2a" stroke-width="1"/>
+<text x="24" y="96" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Ocean Blue</text>
+<text x="24" y="118" font-size="16" letter-spacing="0">
+<tspan fill="#00afff">user</tspan><tspan fill="#00d7ff">@</tspan><tspan fill="#00ffff">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#d7ffff">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+<line x1="24" y1="130" x2="596" y2="130" stroke="#2a2a2a" stroke-width="1"/>
+<text x="24" y="152" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Twilight</text>
+<text x="24" y="174" font-size="16" letter-spacing="0">
+<tspan fill="#0087ff">user</tspan><tspan fill="#5f87ff">@</tspan><tspan fill="#8787ff">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#af87ff">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+<line x1="24" y1="186" x2="596" y2="186" stroke="#2a2a2a" stroke-width="1"/>
+<text x="24" y="208" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Violet Pink</text>
+<text x="24" y="230" font-size="16" letter-spacing="0">
+<tspan fill="#d700ff">user</tspan><tspan fill="#d75fff">@</tspan><tspan fill="#ff87ff">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#ffafff">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+<line x1="24" y1="242" x2="596" y2="242" stroke="#2a2a2a" stroke-width="1"/>
+<text x="24" y="264" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Autumn Leaves</text>
+<text x="24" y="286" font-size="16" letter-spacing="0">
+<tspan fill="#ffd7af">user</tspan><tspan fill="#d70000">@</tspan><tspan fill="#ff5f00">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#af5f5f">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+<line x1="24" y1="298" x2="596" y2="298" stroke="#2a2a2a" stroke-width="1"/>
+<text x="24" y="320" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#888888">Void</text>
+<text x="24" y="342" font-size="16" letter-spacing="0">
+<tspan fill="#87af5f">user</tspan><tspan fill="#5f875f">@</tspan><tspan fill="#87af5f">hostname</tspan><tspan fill="#e0e0e0"> </tspan><tspan fill="#ffffaf">~/path/to/directory</tspan><tspan fill="#e0e0e0"> $</tspan>
+</text>
+</svg>
