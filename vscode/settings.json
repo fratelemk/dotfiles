@@ -9,26 +9,17 @@
         "**/.parcel-cache": true, // Parcel
         "**/.vscode": true, // VSCode
     },
-    // Languages
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
-    },
     // Explorer
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     // Editor
     "editor.lineNumbers": "relative",
-    "editor.minimap.enabled": true,
-    "editor.minimap.autohide": true,
-    "editor.minimap.size": "fill",
+    "editor.minimap.enabled": fale,
+    "editor.fontSize": 14,
     // Workbench
     "workbench.tips.enabled": false,
     "workbench.activityBar.location": "top",
     // Window
-    "window.density.editorTabHeight": "compact",
     "window.commandCenter": true,
     "window.restoreWindows": "all",
     // VIM
@@ -38,9 +29,10 @@
     "vim.useCtrlKeys": true,
     "vim.smartRelativeLine": true,
     "vim.highlightedyank.enable": true,
+    // Terminal
+    "terminal.integrated.fontSize": 16,
     // Misc
     "breadcrumbs.enabled": false,
     "telemetry.telemetryLevel": "off",
-    "chat.commandCenter.enabled": false,
     "extensions.ignoreRecommendations": true,
 }
