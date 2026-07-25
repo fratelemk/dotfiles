@@ -19,6 +19,8 @@
     // Workbench
     "workbench.tips.enabled": false,
     "workbench.activityBar.location": "top",
+    "workbench.editor.showIcons": false,
+    "workbench.iconTheme": null,
     // Window
     "window.commandCenter": true,
     "window.restoreWindows": "all",
