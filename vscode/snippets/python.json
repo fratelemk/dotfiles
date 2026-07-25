@@ -3,41 +3,114 @@
 		"prefix": "main",
 		"body": [
 			"if __name__ == \"__main__\":",
-			"\t${1:pass}"
-		],
+			"\t${1:pass}$0"
+		]
 	},
 	"for": {
 		"prefix": "for",
 		"body": [
 			"for $1 in $2:",
-			"\t${3:pass}"
+			"\t${3:pass}$0"
 		]
 	},
 	"if": {
 		"prefix": "if",
 		"body": [
 			"if $1:",
-			"\t${2:pass}"
+			"\t${2:pass}$0"
+		]
+	},
+	"ifelse": {
+		"prefix": "ifelse",
+		"body": [
+			"if $1:",
+			"\t${2:pass}",
+			"else:",
+			"\t${3:pass}$0"
+		]
+	},
+	"elif": {
+		"prefix": "elif",
+		"body": [
+			"elif $1:",
+			"\t${2:pass}$0"
+		]
+	},
+	"ifelif": {
+		"prefix": "ifelif",
+		"body": [
+			"if $1:",
+			"\t${2:pass}",
+			"elif $3:",
+			"\t${4:pass}$0"
+		]
+	},
+	"ifelifelse": {
+		"prefix": "ifelifelse",
+		"body": [
+			"if $1:",
+			"\t${2:pass}",
+			"elif $3:",
+			"\t${4:pass}",
+			"else:",
+			"\t${5:pass}$0"
 		]
 	},
 	"with": {
 		"prefix": "with",
 		"body": [
 			"with $1 as $2:",
-			"\t${3:pass}"
-		],
+			"\t${3:pass}$0"
+		]
 	},
 	"def": {
 		"prefix": "def",
 		"body": [
-			"def $1($2):",
-			"\t${4:pass}"
-		],
+			"def $1($2)$3:",
+			"\t${4:pass}$0"
+		]
+	},
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class $1$2:",
+			"\tdef __init__(self$3):",
+			"\t\t${4:pass}$0"
+		]
 	},
 	"lambda": {
 		"prefix": "lambda",
 		"body": [
 			"lambda ${1:x}: $2"
-		],
+		]
 	},
+	"try": {
+		"prefix": "try",
+		"body": [
+			"try:",
+			"\t${1:pass}",
+			"except ${2:Exception} as ${3:e}:",
+			"\t${4:pass}$0"
+		]
+	},
+	"tryelse": {
+		"prefix": "tryelse",
+		"body": [
+			"try:",
+			"\t${1:pass}",
+			"except ${2:Exception} as ${3:e}:",
+			"\t${4:pass}",
+			"else:",
+			"\t${5:pass}",
+			"finally:",
+			"\t${6:pass}$0"
+		]
+	},
+	"while": {
+		"prefix": "while",
+		"body": [
+			"while $1:",
+			"\t${2:pass}$0"
+		]
+	}
 }
