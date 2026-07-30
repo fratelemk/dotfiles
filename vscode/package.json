@@ -1,0 +1,65 @@
+{
+    "name": "themes",
+    "displayName": "Themes",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "files": [
+        "themes"
+    ],
+    "preview": true,
+    "contributes": {
+        "themes": [
+            {
+                "label": "Acme",
+                "uiTheme": "vs",
+                "path": "./themes/acme.json"
+            },
+            {
+                "label": "Go - Playground",
+                "uiTheme": "vs",
+                "path": "./themes/go-playground.json"
+            },
+            {
+                "label": "Go - Sources",
+                "uiTheme": "vs",
+                "path": "./themes/go-source.json"
+            }
+        ]
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "acme",
+        "light",
+        "go",
+        "go-playground",
+        "playground",
+        "golang",
+        "vscode",
+        "vscode-theme",
+        "acme theme",
+        "go theme",
+        "go playground theme",
+        "go theme",
+        "light theme"
+    ],
+    "scripts": {
+        "build": "node src/index.ts",
+        "dev": "node --watch src/index.ts",
+        "vscode:prepublish": "npm run build",
+        "lint": "eslint .",
+        "package": "mkdir -p build; vsce package -o ./build/themes.vsix"
+    },
+    "devDependencies": {
+        "@types/node": "^26.1.2",
+        "eslint": "^8.20.0",
+        "typescript": "^7.0.2",
+        "vsce": "^2.10.0"
+    }
+}
