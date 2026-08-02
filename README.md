@@ -122,9 +122,21 @@ EOF
 
 ## [NodeJS](https://nodejs.org/en)
 
+Tagged release
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-nvm install 22
+```
+Latest release
+```bash
+LATEST=$(curl -fsSL https://api.github.com/repos/nvm-sh/nvm/releases/latest | jq -r .tag_name)
+curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/$LATEST/install.sh" | bash
+```
+Latest development release
+```bash
+curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/HEAD/install.sh | bash
+```
+```
+nvm install lts
 ```
 
 ---
