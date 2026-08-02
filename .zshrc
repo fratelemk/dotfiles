@@ -1,9 +1,9 @@
 # Aliases
-alias ll='ls -Ghlp'
+alias ll='ls -GThlp'
 alias la='ls -AGp'
-alias lla='ls -AGhlp'
+alias lla='ls -AGThlp'
 alias lsd='ls -Gd */'
-alias llsd='ls -lGd */'
+alias llsd='ls -lGTd */'
 
 # Functions
 
